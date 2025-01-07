@@ -1,0 +1,284 @@
+<?xml version='1.0'?>
+<JobDefinition>
+  <Comment />
+  <Description />
+  <Name>test_report</Name>
+  <Partition type="Partition" path="GLOBAL" />
+  <ParentApplication />
+  <EquivalentObject>false</EquivalentObject>
+  <CriticalProcess>false</CriticalProcess>
+  <Discarded>false</Discarded>
+  <KeepForce>false</KeepForce>
+  <KeepAmount />
+  <KeepUnits />
+  <KeepType />
+  <KeepJobsInStatus />
+  <KeepInStatusAmount />
+  <KeepInStatusUnit />
+  <MinimumOpenDurationExpression />
+  <Overdue>false</Overdue>
+  <OverdueStatus />
+  <OverviewFormat />
+  <Priority />
+  <MaxPriority>100</MaxPriority>
+  <RestartCount />
+  <ReturncodeMapToCompleted />
+  <HoldOnSubmit>false</HoldOnSubmit>
+  <TopLevel>true</TopLevel>
+  <Template>false</Template>
+  <Maintenance>false</Maintenance>
+  <ReactionJobType />
+  <EvaluationOwnerType>SystemDefault</EvaluationOwnerType>
+  <CompletionStrategy>Default</CompletionStrategy>
+  <OverdueEventDefinition />
+  <DefaultOutputFormat />
+  <JobDefinitionType type="JobDefinitionType" path="GLOBAL.Report" />
+  <DefaultLogFormat />
+  <DefaultQueue />
+  <Resource />
+  <TimeWindow />
+  <TimeWindowTimeZone />
+  <JobTimeZone />
+  <RELRelatedLibrary />
+  <ActionSubject />
+  <JobDefinitionParameter>
+    <Comment />
+    <Description />
+    <Name>OutputFormat</Name>
+    <DataLength />
+    <DataPrecision />
+    <DataScale />
+    <DataType>String</DataType>
+    <DefaultExpression><![CDATA[HTMLText]]></DefaultExpression>
+    <DefaultValueEditable />
+    <Direction>In</Direction>
+    <SimpleConstraintType>List</SimpleConstraintType>
+    <SimpleConstraintData><![CDATA[HTMLText,CSV,XMLText,System_RTX,System_JSON]]></SimpleConstraintData>
+    <SimpleConstraintMessage />
+    <SimpleConstraintOptional>false</SimpleConstraintOptional>
+    <SimpleConstraintSort>Ascending</SimpleConstraintSort>
+    <Display>true</Display>
+    <Password>false</Password>
+    <DisplayOrder>0</DisplayOrder>
+    <Editable>Always</Editable>
+    <GroupName />
+    <PartOfKey>false</PartOfKey>
+    <Nullable>true</Nullable>
+    <Runtime>false</Runtime>
+    <JobFormat />
+    <Array>false</Array>
+    <ArrayMinLength>0</ArrayMinLength>
+    <ArrayMaxLength />
+    <ArrayDuplicateValuesAllowed>false</ArrayDuplicateValuesAllowed>
+    <ArraySorted>false</ArraySorted>
+    <ParameterMappingType>Normal</ParameterMappingType>
+    <JobDefinitionParameterSubType />
+  </JobDefinitionParameter>
+  <JobDefinitionParameter>
+    <Comment />
+    <Description />
+    <Name>ReportLimit</Name>
+    <DataLength />
+    <DataPrecision />
+    <DataScale />
+    <DataType>Number</DataType>
+    <DefaultExpression />
+    <DefaultValueEditable />
+    <Direction>In</Direction>
+    <SimpleConstraintType>Expression</SimpleConstraintType>
+    <SimpleConstraintData><![CDATA[=value <= 500000]]></SimpleConstraintData>
+    <SimpleConstraintMessage />
+    <SimpleConstraintOptional>false</SimpleConstraintOptional>
+    <SimpleConstraintSort>Ascending</SimpleConstraintSort>
+    <Display>true</Display>
+    <Password>false</Password>
+    <DisplayOrder>1</DisplayOrder>
+    <Editable>Always</Editable>
+    <GroupName />
+    <PartOfKey>false</PartOfKey>
+    <Nullable>true</Nullable>
+    <Runtime>false</Runtime>
+    <JobFormat />
+    <Array>false</Array>
+    <ArrayMinLength>0</ArrayMinLength>
+    <ArrayMaxLength />
+    <ArrayDuplicateValuesAllowed>false</ArrayDuplicateValuesAllowed>
+    <ArraySorted>false</ArraySorted>
+    <ParameterMappingType>Normal</ParameterMappingType>
+    <JobDefinitionParameterSubType />
+  </JobDefinitionParameter>
+  <JobDefinitionParameter>
+    <Comment />
+    <Description />
+    <Name>RecordCount</Name>
+    <DataLength />
+    <DataPrecision />
+    <DataScale />
+    <DataType>Number</DataType>
+    <DefaultExpression />
+    <DefaultValueEditable />
+    <Direction>Out</Direction>
+    <SimpleConstraintType>None</SimpleConstraintType>
+    <SimpleConstraintData />
+    <SimpleConstraintMessage />
+    <SimpleConstraintOptional>false</SimpleConstraintOptional>
+    <SimpleConstraintSort>Ascending</SimpleConstraintSort>
+    <Display>true</Display>
+    <Password>false</Password>
+    <DisplayOrder>2</DisplayOrder>
+    <Editable>Always</Editable>
+    <GroupName />
+    <PartOfKey>false</PartOfKey>
+    <Nullable>true</Nullable>
+    <Runtime>false</Runtime>
+    <JobFormat />
+    <Array>false</Array>
+    <ArrayMinLength>0</ArrayMinLength>
+    <ArrayMaxLength />
+    <ArrayDuplicateValuesAllowed>false</ArrayDuplicateValuesAllowed>
+    <ArraySorted>false</ArraySorted>
+    <ParameterMappingType>Normal</ParameterMappingType>
+    <JobDefinitionParameterSubType />
+  </JobDefinitionParameter>
+  <Report>
+    <Query />
+    <Limit>50000</Limit>
+    <ReportQueryType>QueryFilter</ReportQueryType>
+    <QueryFilter type="QueryFilter" path="User.Redwood System.Application.Application%2e;installed" />
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.Comment</Name>
+      <Display>true</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.Comment</Value>
+      <ColumnOrder>0</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.Description</Name>
+      <Display>true</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.Description</Value>
+      <ColumnOrder>1</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.Hidden</Name>
+      <Display>true</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.Hidden</Value>
+      <ColumnOrder>2</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.Name</Name>
+      <Display>true</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.Name</Value>
+      <ColumnOrder>3</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.ParentApplication</Name>
+      <Display>true</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.ParentApplication</Value>
+      <ColumnOrder>4</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.Partition</Name>
+      <Display>true</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.Partition</Value>
+      <ColumnOrder>5</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.Behavior</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.Behavior</Value>
+      <ColumnOrder>6</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.CreationTime</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.CreationTime</Value>
+      <ColumnOrder>7</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.CreationTimeZone</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.CreationTimeZone</Value>
+      <ColumnOrder>8</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.LLPVersion</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.LLPVersion</Value>
+      <ColumnOrder>9</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.LastModificationTime</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.LastModificationTime</Value>
+      <ColumnOrder>10</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.LastModifierSubject</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.LastModifierSubject</Value>
+      <ColumnOrder>11</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.NumExtraCommentLines</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.NumExtraCommentLines</Value>
+      <ColumnOrder>12</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.SearchName</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.SearchName</Value>
+      <ColumnOrder>13</ColumnOrder>
+    </ReportColumn>
+    <ReportColumn>
+      <Comment />
+      <Description />
+      <Name>Application.UniqueId</Name>
+      <Display>false</Display>
+      <ColumnFormat>Formatted</ColumnFormat>
+      <Value>Application.UniqueId</Value>
+      <ColumnOrder>14</ColumnOrder>
+    </ReportColumn>
+  </Report>
+</JobDefinition>
